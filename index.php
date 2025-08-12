@@ -1,14 +1,23 @@
 <?php
-    $currentTime = date("H:i:s");
+    $currentTime = date('H:i:s');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Time & Form</title>
 </head>
 <body>
-    <h3>Current Server Time: <?php echo $currentTime; ?></h3>
+    <h1>Current Server Time: <?php echo $currentTime; ?></h1>
+
+    <form action="handle_form.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color" required>
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
