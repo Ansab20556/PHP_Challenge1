@@ -1,7 +1,20 @@
 <?php
 session_start();
-$name = $_SESSION['name'] ?? 'Guest';
-$color = $_SESSION['color'] ?? 'black';
+if (isset($_SESSION['name'])) 
+{
+    $name = $_SESSION['name'];
+} else 
+{
+    $name = 'Guest';
+}
+
+if (isset($_SESSION['color'])) 
+{
+    $color = $_SESSION['color'];
+} else 
+{
+    $color = 'black';
+}
 
 session_unset();
 ?>
